@@ -1,0 +1,41 @@
+<html>
+<head><title>Create User</title></head>
+<body>
+
+	<script>
+	function validate()
+	{
+		var user_id = document.getElementById("user_id").value;
+		var password = document.getElementById(password).value;
+		if(user_id.length > 255)
+		{
+			alert("User ID cannot be longer than 255 characters");
+			return false;
+		}
+		else if(user_id.length == 0)
+		{
+			alert("User ID cannot be null");
+			return false;
+		}
+		else if(password.length == 0)
+		{
+			alert("Please enter a password");
+			return false;
+		}
+		else if(password.length > 255)
+		{
+			alert("Password cannot be longer than 255 characters");
+			return false;
+		}
+		return true;
+	}
+	</script>
+
+<form action="createUser.php" method="POST" onsubmit="return validate()">
+	<input type="text" name="user_id" id="user_id">
+	<input type="password" name="password" id="password">
+	<input type="submit">
+</form>
+
+</body>
+</html>
