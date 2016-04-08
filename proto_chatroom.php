@@ -40,7 +40,7 @@
 	
 		<br>
 		
-		<form action="ScrollBars_example.php" method="POST" id="myform">
+		<form action="proto_chatroom.php" method="POST" id="myform">
 			<input type="submit">
 		</form>
 		
