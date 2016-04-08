@@ -55,13 +55,18 @@ else
 
 <html>
 	<head>
+		<script type="text/javascript"
+			src="Post.js">
+		</script>
 	</head>
 
 	<body>	
-		<textarea rows="4" cols="50">
+		<div style="width:300px; height: 300px;background-color:black; color:white; padding:10px; overflow-y: scroll;" id="test"> Initial Text </div>
+	
+		<textarea rows="4" cols="50" id="textInput">
 		</textarea> <br>
 		
-		<button> Post </button>
+		<button onclick="postMessage()"> Post </button>
 
 		<form action="ChatRemove.php">
 			<input type="submit" value="Leave Chat">
