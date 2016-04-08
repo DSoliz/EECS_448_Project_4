@@ -1,5 +1,5 @@
 <?php
-session_save_path("/home/mbechtel/public_html/448/Project3");
+session_save_path("/home/mbechtel/public_html/448/Project3/Sessions");
 session_start();
 
 $mysqli = new mysqli("mysql.eecs.ku.edu", "mbechtel", "eecs448labPW", "mbechtel");

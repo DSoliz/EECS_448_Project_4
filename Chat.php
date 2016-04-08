@@ -1,5 +1,5 @@
 <?php
-session_save_path("/home/mbechtel/public_html/448/Project3");
+session_save_path("/home/mbechtel/public_html/448/Project3/Sessions");
 session_start();
 
 error_reporting(E_ALL);
@@ -46,7 +46,7 @@ else
 	}
 	else
 	{
-		echo "<script type='text/javascript'>alert('A person with that nickname is in the chat room');</script>";
+		//echo "<script type='text/javascript'>alert('A person with that nickname is in the chat room');</script>";
 	}
 
 	$mysqli->close();
@@ -57,9 +57,11 @@ else
 	<head>
 	</head>
 
-	<body>
+	<body>	
 		<textarea rows="4" cols="50">
-		</textarea>
+		</textarea> <br>
+		
+		<button> Post </button>
 
 		<form action="ChatRemove.php">
 			<input type="submit" value="Leave Chat">
