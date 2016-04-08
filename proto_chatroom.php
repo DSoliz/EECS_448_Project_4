@@ -3,7 +3,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
 	</script>
 
-    <div id="chatBox" style="width:300px; height: 300px;background-color:black; color:white; padding:10px; overflow-y: scroll; overflow-x:hidden;  word-wrap: break-word;">
+    <div id="chatBox>
 	
 	<?php
 	session_save_path("./Sessions/");
