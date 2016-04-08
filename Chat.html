@@ -1,0 +1,16 @@
+<?php
+session_start();
+?>
+
+<html>
+	<head>
+	</head>
+
+	<body onunload="document.location=ChatRemove.php">
+		<form action="Chat.php">
+			Chat Nickname: <input type="text" name="nickname"> <br>
+			
+			<input type="submit" value="Enter Chat">
+		</form>
+	</body>
+<html>
