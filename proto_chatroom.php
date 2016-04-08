@@ -6,11 +6,15 @@
     <div id="chatBox" style="width:300px; height: 300px;background-color:black; color:white; padding:10px; overflow-y: scroll; overflow-x:hidden;  word-wrap: break-word;">
 	
 	<?php
+	session_save_path("./Sessions/");
+	session_start();
+	
 	//Here you catch message as sent by the submit form
 	$msg = $_POST['message'];
+
 	//Formatting the message
 	if($msg != "" && $msg != NULL){
-		$formated_msg = "<p>".$msg."</p>";
+		$formated_msg = "<p>".$_SESSION["nextpage"].": ".$msg."</p>";
 		//Opening the log
 		$myfile = fopen("roomlog.txt", "a+");
 		//writing the message to the log
@@ -36,7 +40,7 @@
 	<textarea name="message" rows="2" cols="40" id="textInput" form="myform" style="resize: none;overflow:auto;"></textarea>
 	<br>
 		<form action="proto_chatroom.php" method="POST" id="myform">
-			<input type="submit">
+			<input type="submit" value="Post message">
 		</form>
 		
 		<form action="ChatRemove.php">

@@ -1,5 +1,5 @@
 <?php
-session_save_path("./Sessions/");
+session_save_path("/home/mbechtel/public_html/448/Project3");
 session_start();
 
 $mysqli = new mysqli("mysql.eecs.ku.edu", "mbechtel", "eecs448labPW", "mbechtel");
@@ -23,8 +23,6 @@ $mysqli->close();
 	</head>
 
 	<body>
-		<p> Thanks for chatting </p>	
-
-		<a href="http://people.eecs.ku.edu/~mbechtel/448/Project3/Chat.html"> Return to login </a>		
+		<p> Thanks for chatting </p>			
 	</body>
 </html>
