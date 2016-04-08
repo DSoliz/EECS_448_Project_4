@@ -14,10 +14,14 @@ session_start();
 		<script src="http://people.eecs.ku.edu/~cwelch/Project_3/Project_3/EECS-448-Project-3/mdl/material.min.js"></script>
 		
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+		<script type="text/javascript"
+			src="Checker.js">
+		</script>
 	</head>
 		
 	<body onunload="document.location=ChatRemove.php">
-			<form action="Chat.php">
+			<form action="Chat.php" onsubmit="return isValid()">
 				<div class="mdl-textfield mdl-js-textfield">
 					<input class="mdl-textfield__input" type="text" id="sample1" name="nickname">
 					<label class="mdl-textfield__label" for="sample1">Choose Nickname</label>
