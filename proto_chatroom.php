@@ -37,8 +37,7 @@
 	</script>
 	
 	<br>
-	<textarea name="message" rows="2" cols="40" id="textInput" form="myform" style="resize: none;overflow:auto;"></textarea>
-	<br>
+	<textarea name="message" rows="2" cols="40" id="textInput" form="myform"></textarea>
 		<form action="proto_chatroom.php" method="POST" id="myform">
 			<input type="submit" value="Post message">
 		</form>
