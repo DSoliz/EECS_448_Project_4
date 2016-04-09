@@ -1,9 +1,15 @@
 	<?php
+	/**
+	 * @author Diego Soliz
+	 */
 
+	 //Open the message board log and set it to append
 	$myfile = fopen("roomlog.txt", "a+");
 	
+	//Read from the current file
 	echo fread($myfile,filesize("roomlog.txt"));
 
+	//Close the file
 	fclose($myfile);
 	
 	/*

@@ -6,6 +6,10 @@
     <div id="chatBox>
 	
 	<?php
+	/**
+	 * @author Diego Soliz, Michael Bechtel
+	 */
+	//Start the session to get the user's nickname
 	session_save_path("./Sessions/");
 	session_start();
 	
