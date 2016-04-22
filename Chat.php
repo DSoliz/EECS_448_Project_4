@@ -55,9 +55,15 @@ else
 
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
 		<script type="text/javascript"
 			src="Post.js">
 		</script>
+		
+		<script type="text/javascript"
+			src="UserList.js">
+		</script>		
 	</head>
 
 	<body>	
@@ -65,6 +71,13 @@ else
 
 		<form action="proto_chatroom.php" method="POST" id="form">
 			<input type="submit" value="Enter Chat">
+		</form>
+		
+		<form>
+			<label> Search for User </label>
+			<input type="text" name="usersearch" id="usersearch">
+			
+			<div id="userson"></div>
 		</form>
 	</body>
 </html>

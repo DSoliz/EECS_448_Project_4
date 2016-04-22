@@ -2,3 +2,4 @@
 p><p>Cwelch: Just figured out there is a glitch. When you send a message and hit refresh it sends it again.</p><p>Cwelch: Just figured out there is a glitch. When you send a message and hit refresh it sends it again.</p><p>Cwelch: Also we should add a time and date to sent messages to keep track of messages</p><p>Diego: Yup, we should also probably copy this chat log and keep all the good ideas on a text file on the git hub.</p><p>Diego:  ༼ つ ◕_◕ ༽つ Hello Class!!
 ┏(-_-)┛┗(-_-﻿ )┓┗(-_-)┛┏(-_-)┓ </p><p>asdf: glar</p><p>asdf: ";</p><p>Diego: Testing</p><p>Diego: is it me?</p><p>Diego: Hello</p>
 <p>Diego: test</p>
+<p>kl;kl: gdfg</p><p>Test: H</p>
