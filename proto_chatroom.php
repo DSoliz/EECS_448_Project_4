@@ -1,28 +1,34 @@
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
-	</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
+	
+    <link href="ChatStyle.css"
+	      rel="stylesheet"
+	      type="text/css"/> 
 
-    <div id="chatBox>
+    <div id="chatBox">
 	
 	<?php
-	/**
-	 * @author Diego Soliz, Michael Bechtel
-	 */
-	//Start the session to get the user's nickname
 	session_save_path("./Sessions/");
 	session_start();
 	
 	//Here you catch message as sent by the submit form
 	$msg = $_POST['message'];
 
+	$msg = htmlspecialchars($msg);
+	
 	//Formatting the message
-	if($msg != "" && $msg != NULL){
+	if($msg != "" && $msg != NULL && $_SESSION["nextpage"] != ""){
 		$formated_msg = "<p>".$_SESSION["nextpage"].": ".$msg."</p>";
 		//Opening the log
 		$myfile = fopen("roomlog.txt", "a+");
 		//writing the message to the log
 		fwrite($myfile, $formated_msg);
+	}
+	else if ($_SESSION["nextpage"] == "")
+	{
+            header("Location: http://people.eecs.ku.edu/~mbechtel/448/Project3/Chat.html");
+            exit();
 	}
 	//Opening file again and displaying its contents
 	$myfile = fopen("roomlog.txt", "a+");
@@ -41,13 +47,16 @@
 	</script>
 	
 	<br>
-	<textarea name="message" rows="2" cols="40" id="textInput" form="myform"></textarea>
-		<form action="proto_chatroom.php" method="POST" id="myform">
-			<input type="submit" value="Post message">
-		</form>
+	<textarea name="message" rows="2" cols="40" id="textInput" form="myform" onkeydown></textarea>
+	<br> <br> <br> <br> <br>
+			
+	
+	<form action="proto_chatroom.php" method="POST" id="myform" name="textPost">
+		<input type="submit" value="Post message">
+	</form> <br> <br> <br>
 		
-		<form action="ChatRemove.php">
-			<input type="submit" value="Leave Chat">
-		</form>
+	<form action="ChatRemove.php">
+		<input type="submit" value="Leave Chat">
+	</form>
   </head>
 </html>
