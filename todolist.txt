@@ -1,0 +1,5 @@
+- Create Register and Login areas on Chat.html
+- Have user search return all users, but highlight people who are online in some way
+- Password hashing
+- Putting options next to each person on the search (Adding friends, etc.)
+- Redesign "Pre-Chat Room"

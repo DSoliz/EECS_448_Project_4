@@ -54,6 +54,10 @@
 	<form action="proto_chatroom.php" method="POST" id="myform" name="textPost">
 		<input type="submit" value="Post message">
 	</form> <br> <br> <br>
+	
+	<form action="Chat.php">
+                <input type"submit" value="Return to Pre-Chat">
+        </form>
 		
 	<form action="ChatRemove.php">
 		<input type="submit" value="Leave Chat">
