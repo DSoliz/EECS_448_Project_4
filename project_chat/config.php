@@ -1,8 +1,8 @@
 <?php
-define('DB_SERVER', '/tmp/mysql.sock'); // sudo mysqladmin variables -u root -p
+define('DB_SERVER', ''); // sudo mysqladmin variables -u root -p
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'manticore');
-define('DB_DATABASE', 'ChatWebsite');
+define('DB_PASSWORD', ');
+define('DB_DATABASE', '');
 
 //$db = new MySQLi('host', username, password, databasename, port, server_socket_location);
 //where I used port and server socket location I was running a localy hosted database
