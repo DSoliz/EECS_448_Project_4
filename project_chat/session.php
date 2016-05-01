@@ -1,6 +1,12 @@
 <?php
 	include("config.php");
 	session_start();
+	error_reporting(E_ALL);
+	ini_set("display_errors", 1);
+
+	if(!isset($_SESSION['login_user'])){
+		header("location: /login.php"); //Place absolute path to login .php to prevent path errors
+	}
 
 	$user_check = $_SESSION['login_user'];
 	//check if user is in the database
@@ -15,11 +21,16 @@
 
 	$login_session = $row['username'];
 	$_SESSION['id'] = $row['id'];
+
+	//Use this variable for Current USER ID!!
 	$id = $_SESSION['id'];
+	//
+
+	//////////////////////////////////////////////
+	//NEED METHOD TO ADD USER TO ONLINE DATABASE
+	//OR CHANGE HIS STATUS TO ONLINE IF OTHER USER IS FRIEND
+	//////////////////////////////////////////////
 
 	//isset determines if a variable is set and not null
 	//If it is null it sends user to the login page
-	if(!isset($_SESSION['login_user'])){
-		header("location: /login.php"); //Place absolute path to login .php to prevent path errors
-	}
 ?>

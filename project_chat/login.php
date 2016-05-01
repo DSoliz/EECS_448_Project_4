@@ -31,23 +31,23 @@
 	}
 ?>
 <html>
-	<head>
-	</head>
-	<body>
-		<div align = "center">
+<head>
+	<link href="login_register.css" rel="stylesheet" type="text/css"/>
+	<title>Login</title>
+</head>
+<body>
+	<div id="div1" align = "center" >
+		<br><div>Login</div><br>
 			<div>
-			<div>Login</div>
-				<div>
-					<form action = "" method = "post">
-						<label>UserName :</label><input type = "text" name = "username" class = "box"/><br /><br />
-						<label>Password :</label><input type = "password" name = "password" class = "box" /><br/><br />
-						<input type = "submit" value = " Submit "/><br />
-					</form>
-					<div><?php echo $error; ?></div>
-				</div>
+				<form action = "" method = "post">
+					<label>UserName :</label><input type = "text" name = "username" class = "box"/><br /><br />
+					<label>Password :</label><input type = "password" name = "password" class = "box" /><br/><br />
+					<button type = "submit">Submit<br />
+				</form>
+				<div><?php echo $error; ?></div>
 			</div>
-			<a href="register.php">Sign Up</a>
-		</div>
+		<a href="register.php">Sign Up</a>
+	</div>
 
-	</body>
+</body>
 </html>
