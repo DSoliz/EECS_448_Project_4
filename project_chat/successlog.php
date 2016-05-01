@@ -3,7 +3,7 @@
 	if(isset($_SESSION['login_user'])==""){
 		header("Location: login.php");
 	}else{
-		header("Location: Chatroom/Chat.php");
+		header("Location: Chatroom/chatroom.php");
 	}
 ?>
 <html>

@@ -1,34 +1,38 @@
 <?php
-include("include_methods.php"); //Includes session.php
+include("../session.php");
+date_default_timezone_set('America/Chicago');
 
-//Where getFriends( is friend )[ id ]
-$friends_by_id = getFriends(1)[0]; //Friends by id
-//Where getFriends( is friend )[ name string ]
-$u_friend_str = getFriends(1)[1]; //Friend array by name
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
+$u_friends = array(); //Friends by id
+$u_friend_str = array(); //Friend array by name
 
+$query = "SELECT friend_two FROM Friends where friend_one = '$id' and status = 1";
 
-for($i = 0; $i < sizeof($friends_by_id); $i++){
-	$friend_id = $friends_by_id[$i];
+if($result = $db->query($query)){
+	while($row_friend = $result->fetch_assoc()){
+		array_push($u_friends, $row_friend['friend_two']); //This will be pushing friend id's into $u_friends
+	}
+	$result->free();
+}
+
+for($i = 0; $i < sizeof($u_friends); $i++){
+	$friend_id = $u_friends[$i];
 	$friendQuery = "SELECT UserName FROM Users WHERE id = $friend_id ";
 	if($result = $db->query($friendQuery)){
 		$row_friend = $result->fetch_assoc();
-		array_push($u_friend_str, $row_friend['UserName']);
+		array_push($u_friend_str, $row_friend['UserName']); //This will be pushing friend id's into $u_friends
 
 		$result->free();
 	}
 }
-
-$outString = "";
-for($i = 0; $i < sizeof($friends_by_id); $i++){
-	$friend_id = $friends_by_id[$i];
-	$friend_str = $u_friend_str[$i];
-
-
-
-	echo ($u_friend_str[$i] . "<button type='submit' name = 'start_chat' value='$friend_id'>CHAT</button>
-	<button type='submit' name = 'unFriend' value='$friend_id'>UNFRIEND</button><br/>"); //Need to add start chat Button
+for($i = 0; $i < sizeof($u_friends); $i++){
+	echo $u_friend_str[$i] . "<br>";
 }
 
-$db->close();
+if(!isset($_POST['inpfr']))
+{
+	return;
+}
 ?>
