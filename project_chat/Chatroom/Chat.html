@@ -1,0 +1,35 @@
+<?php
+session_save_path("./Sessions/");
+session_start();
+?>
+
+<html>
+	<head>
+		<link rel="stylesheet" href="./mdl/material.min.css">
+		
+		<link rel="stylesheet" href="http://people.eecs.ku.edu/~mbechtel/448/Project3/mdl/material.min.css">
+		
+		<script src="./mdl/material.min.js"></script>
+		
+		<script src="http://people.eecs.ku.edu/~mbechtel/448/Project3/mdl/material.min.js"></script>
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+		<script type="text/javascript"
+			src="Checker.js">
+		</script>
+	</head>
+		
+	<body onunload="document.location=ChatRemove.php">
+			<form action="Chat.php" onsubmit="return isValid()">
+				<div class="mdl-textfield mdl-js-textfield">
+					<input class="mdl-textfield__input" type="text" id="sample1" name="nickname">
+					<label class="mdl-textfield__label" for="sample1">Choose Nickname</label>
+				</div>
+			
+                                <br>
+                                
+				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" value="Enter Chat" id="nickname">
+			</form>
+	</body>
+<html>

@@ -17,10 +17,11 @@ USE BlogWebsite;
 //Creating Users table
 */
 CREATE TABLE Users (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-UserName VARCHAR(20),
+UserName UNIQUE INDEX VARCHAR(20),
 Password VARCHAR(20),
 confirmed CHAR(1),
 signup_date DATE);
+-->ALTER TABLE Users ADD UNIQUE INDEX(UserName);
 /*
 //End of Instruction
 */
@@ -33,9 +34,9 @@ DELETE FROM Users WHERE id=some_value;
 /*
 //Online Users table
 */
-CREATE TABLE Online (username varchar(11) NOT NULL PRIMARY KEY);
+CREATE TABLE Online (id INT NOT NULL PRIMARY KEY,username varchar(20) NOT NULL);
 /*
-	INSERT INTO Online (username) VALUES ("online usr");
+	INSERT INTO Online (id,username) VALUES (id , "online usr");
 */
 
 /*

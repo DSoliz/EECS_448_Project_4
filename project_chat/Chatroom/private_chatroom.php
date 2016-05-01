@@ -1,7 +1,8 @@
 <?php
 	include("../session.php");
+	$_SESSION['friend_id'] = $_POST['start_chat'];
 ?>
-<script type="text/javascript"src="chatroom_methods.js"></script>
+<script type="text/javascript"src="private_chatroomMethods.js"></script>
 
 <html>
 	<head>

@@ -32,21 +32,24 @@ if(isset($_POST['signup_button'])){
 ?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Registration System</title>
+	<link href="login_register.css" rel="stylesheet" type="text/css"/>
+	<title>Register</title>
 
 </head>
 <body>
 	<center>
-		<div id="login-form" align="center">
-			<form action ="" method="post">
+		<div id="div1">
+			<br><div>Register</div><br>
+			<div id="login-form" align="center">
+				<form action ="" method="post">
 
-					<label>UserName :</label><input type="text" name="username" required /><br /><br />
-					<label>Password :</label><input type="password" name="password" required /><br /><br />
+						<label>UserName :</label><input type="text" name="username" required /><br /><br />
+						<label>Password :</label><input type="password" name="password" required /><br /><br />
 
-					<button type="submit" name="signup_button">Sign Me Up</button><br /><br />
-					<a href="login.php">Sign In Here</a>
-			</form>
+						<button type="submit" name="signup_button">Submit Registration</button><br /><br />
+						<a href="login.php">Sign In Here</a>
+				</form>
+			</div>
 		</div>
 	</center>
 </body>

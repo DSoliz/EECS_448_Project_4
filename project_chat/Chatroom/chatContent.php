@@ -1,8 +1,8 @@
 	<?php
+	
+	$myfile = fopen("./chat_logs/roomlog.txt", "a+");
 
-	$myfile = fopen("roomlog.txt", "a+");
-
-	echo fread($myfile,filesize("roomlog.txt"));
+	echo fread($myfile,filesize("./chat_logs/roomlog.txt"));
 
 	fclose($myfile);
 
