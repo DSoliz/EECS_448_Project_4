@@ -17,11 +17,11 @@ USE BlogWebsite;
 //Creating Users table
 */
 CREATE TABLE Users (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-UserName UNIQUE INDEX VARCHAR(20),
+UserName VARCHAR(20),
 Password VARCHAR(20),
 confirmed CHAR(1),
 signup_date DATE);
--->ALTER TABLE Users ADD UNIQUE INDEX(UserName);
+ALTER TABLE Users ADD UNIQUE INDEX(UserName);
 /*
 //End of Instruction
 */
@@ -44,7 +44,7 @@ Friend Relationship table
 Where
 status == 0 = pending request
 status == 1 = friend
-status == 2 = When user id is friend_one and friend_two
+status == 2 = When user id = friend_one = friend_two // we can change the meaning of this
 */
 CREATE TABLE Friends ( friend_one INT ,
 friend_two INT ,
