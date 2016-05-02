@@ -12,7 +12,7 @@
 		$usr = mysqli_real_escape_string($db,$_POST['username']);
 		$pass = mysqli_real_escape_string($db,$_POST['password']);
 
-		$myquery = "SELECT id FROM Users WHERE UserName = '$usr' and Password = '$pass'";
+		$myquery = "SELECT id,Password FROM Users WHERE UserName = '$usr'";
 		$start = 1;
 		$result = mysqli_query($db,$myquery);
 		$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -22,7 +22,7 @@
 		//If unsuccesful it may be the case usernames are duplicated
 		$count = mysqli_num_rows($result);
 
-		if($count == 1) {
+		if(password_verify($pass, $row[Password])) {
 			$_SESSION['login_user'] = $usr;
 			header("location: successlog.php");
 		}else {
@@ -44,7 +44,7 @@
 					<label>Password :</label><input type = "password" name = "password" class = "box" /><br/><br />
 					<button type = "submit">Submit<br />
 				</form>
-				<div><?php echo $error; ?></div>
+				<div><?php echo ""; ?></div>
 			</div>
 		<a href="register.php">Sign Up</a>
 	</div>

@@ -18,7 +18,7 @@ USE BlogWebsite;
 */
 CREATE TABLE Users (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 UserName VARCHAR(20),
-Password VARCHAR(20),
+Password VARCHAR(255),
 confirmed CHAR(1),
 signup_date DATE);
 ALTER TABLE Users ADD UNIQUE INDEX(UserName);

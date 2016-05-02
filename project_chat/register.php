@@ -12,11 +12,12 @@ if(isset($_POST['signup_button'])){
 	//preventing code injection
 	$usr = mysqli_real_escape_string($db,$_POST['username']);
 	$pass = mysqli_real_escape_string($db,$_POST['password']);
+	$hash = password_hash($pass, PASSWORD_DEFAULT);
 	$date = date("Y-m-d");
 
 	//echo $usr . " " .$pass; //ucomment to check the POST values for usrname and pass
 
-	$insertquery = "INSERT INTO Users (id,UserName,Password,confirmed,signup_date) VALUES (NULL, '$usr', '$pass','Y', '$date')";
+	$insertquery = "INSERT INTO Users (id,UserName,Password,confirmed,signup_date) VALUES (NULL, '$usr', '$hash','Y', '$date')";
 		//!!WARNING!! NEED a method to check if username and password are valid for registration, with a boolean return ot plug into the if statement below
 		if($usr != "" && $pass != "" && mysqli_query($db,$insertquery)){
 ?>
