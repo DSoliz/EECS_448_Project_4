@@ -1,12 +1,13 @@
 <?php
-define('DB_SERVER', ''); // sudo mysqladmin variables -u root -p
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_DATABASE', '');
+define('DB_SERVER', '/tmp/mysql.sock'); // sudo mysqladmin variables -u root -p
+define('DB_USERNAME', 'dsolizca');
+
+define('DB_PASSWORD', 'Mygenericpass');
+define('DB_DATABASE', 'dsolizca');
 
 //$db = new MySQLi('host', username, password, databasename, port, server_socket_location);
 //where I used port and server socket location I was running a localy hosted database
-$db = new MySQLi('localhost', DB_USERNAME, DB_PASSWORD, DB_DATABASE, 0, DB_SERVER);
+$db = new MySQLi('mysql.eecs.ku.edu', DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
 //If you are using EECS databses use this instead
 //$db = new MySQLi('mysql.eecs,ku,edu', 'username', 'password', 'username';
