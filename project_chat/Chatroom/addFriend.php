@@ -6,7 +6,7 @@
 
 	echo "Request Sent to USER ID: " . $requestReceiver;
 
-	$user_to_friend= "INSERT INTO friends (friend_one,friend_two) VALUES ('$id','$requestReceiver')";
+	$user_to_friend= "INSERT INTO Friends (friend_one,friend_two) VALUES ('$id','$requestReceiver')";
 	//$friend_to_user= "INSERT INTO friends (friend_one,friend_two) VALUES ('$requestReceiver','$id')";
 	/*
 	The above should return a table of the following form where user id 1 added user id 2
