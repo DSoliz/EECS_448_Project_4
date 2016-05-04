@@ -57,6 +57,10 @@ function respond_request(req_id,response)
 	refresh_lists();
 }
 
+setInterval(function(){
+		refresh_lists();
+	}, 3000);
+
 function refresh_lists(){
 	search_User_List();
 	friend_requestor_list();

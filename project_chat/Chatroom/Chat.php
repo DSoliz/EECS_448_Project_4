@@ -50,7 +50,7 @@ else{
 	<body>
 		<div> Notifications:
 			<div id = "notifications">
-				<form id="friendRequests" action= "javascript:alert( 'submited' );"></form> <br/>
+				<form id="friendRequests" action= "javascript:console.log( 'submited' );"></form> <br/>
 
 				<div id = "notify_actions"></div>
 			</div>
@@ -66,7 +66,7 @@ else{
 			<input type="text" name="usersearch" id="usersearch">
 		</form>
 			<div>
-				<form id="users" action= "javascript:alert( 'Request Sent' );"></form> <br/>
+				<form id="users" action= "javascript:console.log( 'Request Sent' );"></form> <br/>
 			</div>
 
 
