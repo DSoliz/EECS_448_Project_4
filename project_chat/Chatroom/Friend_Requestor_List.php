@@ -23,8 +23,8 @@ if($result = $db->query($query_requests)){
 $toDisplay = ""; //Html formated string with buttons to accept or decline the rquest
 
 for($i = 0; $i < sizeof($requestor_id); $i++){
-	$accept_button = "<button type='submit' name = 'accept' data-requestor_id = '" . $requestor_id[$i] ."' value='1'>Accept</button>";
-	$decline_button = "<button type='submit' name = 'decline' data-requestor_id = '" . $requestor_id[$i] ."' value='0'>Decline</button>";
+	$accept_button = "<button class='mdl-button mdl-js-button mdl-button-- mdl-color--orange' type='submit' name = 'accept' data-requestor_id = '" . $requestor_id[$i] ."' value='1'>Accept</button>";
+	$decline_button = "<button class='mdl-button mdl-js-button mdl-button-- mdl-color--orange' type='submit' name = 'decline' data-requestor_id = '" . $requestor_id[$i] ."' value='0'>Decline</button>";
 	$toDisplay = $toDisplay . $requestor_UsrName[$i] . $accept_button . $decline_button ."<br/>";
 }
 $db->close();

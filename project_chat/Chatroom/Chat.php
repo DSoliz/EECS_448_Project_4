@@ -32,6 +32,7 @@ else{
 	$db->close();
 }
 ?>
+
 <html>
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -44,42 +45,83 @@ else{
 			}
 		};
 		</script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+		<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 		<link href="Chat.css" rel="stylesheet" type="text/css"/>
 	</head>
 
 	<body>
-		<div> Notifications:
-			<div id = "notifications">
-				<form id="friendRequests" action= "javascript:console.log( 'submited' );"></form> <br/>
+		<center>
+			<div class="grid">
+					<div class="col-1-3glass">
+						<form>
 
-				<div id = "notify_actions"></div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+							    <label class="mdl-button mdl-js-button mdl-button--icon" for="friend_filter">
+							      <i class="material-icons">search</i>
+							    </label>
+							    <div class="mdl-textfield__expandable-holder">
+							      <input class="mdl-textfield__input" type="text" id="friend_filter">
+							      <label class="mdl-textfield__label" for="friend_filter"></label>
+							    </div>
+							  </div>Search Friends
+						</form>
+						<form id="userFriendList" action = "private_chatroom.php" method = "POST" ></form>
+					</div>
+
+
+					<div class="col-1-3glass">
+						<form>
+
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+							    <label class="mdl-button mdl-js-button mdl-button--icon" for="usersearch">
+							      <i class="material-icons">search</i>
+							    </label>
+							    <div class="mdl-textfield__expandable-holder">
+							      <input class="mdl-textfield__input" type="text" id="usersearch">
+							      <label class="mdl-textfield__label" for="usersearch"></label>
+							    </div>
+							  </div>Search Users
+						</form>
+						<form id="users" action= "javascript:alert( 'Request Sent' );"></form>
+
+					</div>
+
+					<div class="col-1-3">
+						<div ALIGN="middle" class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">account_box</div>
+
+						<!--<br><label style="display: inline-block;width: 140px;text-align: right;">Notifications:</label>-->
+
+						<div id = "notifications">
+
+							<div id = "notify_actions"></div>
+
+						</div>
+					</div>
+					<div class="col-1-3">
+						<form action="../logout.php">
+							<button class="mdl-button mdl-js-button mdl-button-- mdl-color--orange">LOGOUT</button>
+						</form>
+					</div>
 			</div>
-		</div>
+			<div class="grid">
+				<div class="col-1-3">
 
-		<form action="chatroom.php" method="GET" id="form">
-			<button type="submit" >Enter Public Chat</button>
-		</form>
+						<form action="chatroom.php" method="GET" id="form">
+							<button class="mdl-button mdl-js-button mdl-button-- mdl-color--orange">Enter Public Chat</button>
+						</form>
 
-		<form>
 
-			<label> Search for User </label>
-			<input type="text" name="usersearch" id="usersearch">
-		</form>
-			<div>
-				<form id="users" action= "javascript:console.log( 'Request Sent' );"></form> <br/>
+				</div>
+
+
+
+
+
+
+
 			</div>
-
-
-		<form>
-			<label> Friend List </label>
-			<input type="text" name="friend_filter" id="friend_filter">
-		</form>
-			<div>
-				<form id="userFriendList" action = "private_chatroom.php" method = "POST" ></form> <br/>
-			</div>
-
-		<form action="../logout.php">
-			<button type="submit">LOGOUT</button>
-		</form>
+		</center>
 	</body>
 </html>

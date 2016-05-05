@@ -58,7 +58,7 @@ for($i = 0; $i < sizeof($Users); $i++)
 				$toDisplay = $toDisplay . $Users[$i] . "<br />";
 			}
 		}else{
-			$toDisplay = $toDisplay . $Users[$i] . "<button type='submit' name = 'toAdd' value='". $UsersID[$i] ."'>AddFriend</button><br />";
+			$toDisplay = $toDisplay . $Users[$i] . "<button class='mdl-button mdl-js-button mdl-button-- mdl-color--orange' type='submit' name = 'toAdd' value='". $UsersID[$i] ."'>AddFriend</button><br />";
 		}
 	}
 }
