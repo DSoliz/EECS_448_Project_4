@@ -1,6 +1,6 @@
 <?php
-	include("config.php");
 	session_start();
+	include("config.php");
 	error_reporting(E_ALL);
 	ini_set("display_errors", 1);
 
@@ -10,7 +10,7 @@
 
 	$user_check = $_SESSION['login_user'];
 	//check if user is in the database
-	$ses_sql = mysqli_query($db,"SELECT id, username FROM Users where UserName = '$user_check' ");
+	$ses_sql = mysqli_query($db,"SELECT id, UserName FROM Users WHERE UserName = '$user_check' ");
 
 	//Where MYSQLI_ASSOCiative crates and array of the type ['value1','value2','value3'].
 	$row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
@@ -19,7 +19,7 @@
 	//echo implode(" ",$row);
 	//echo $row['username'];
 
-	$login_session = $row['username'];
+	$login_session = $row['UserName'];
 	$_SESSION['id'] = $row['id'];
 
 	//Use this variable for Current USER ID!!

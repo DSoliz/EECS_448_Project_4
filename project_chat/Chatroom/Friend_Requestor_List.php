@@ -6,7 +6,7 @@ include("../session.php");
 //and also buttons to accept or decline request.
 
 //this return array of users that have sent a request to the current user
-$query_requests = "SELECT UserName, id FROM Users WHERE id IN (SELECT friend_one FROM Friends where friend_two = '$id' and status = '0')";
+$query_requests = "SELECT UserName, id FROM Users WHERE id IN (SELECT friend_one FROM Friends WHERE friend_two = '$id' and status = '0')";
 
 $requestor_UsrName = array(); //array holding the name of the requestors
 $requestor_id = array(); //array hoding the id of the requestors

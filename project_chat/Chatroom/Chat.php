@@ -70,7 +70,6 @@ else{
 						<form id="userFriendList" action = "private_chatroom.php" method = "POST" ></form>
 					</div>
 
-
 					<div class="col-1-3glass">
 						<form>
 
@@ -88,39 +87,20 @@ else{
 
 					</div>
 
-					<div class="col-1-3">
-						<div ALIGN="middle" class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">account_box</div>
-
-						<!--<br><label style="display: inline-block;width: 140px;text-align: right;">Notifications:</label>-->
-
+					<div class="col-1-3glass">
+						<br>
+						<div>Notifications:</div>
 						<div id = "notifications">
-
+							<form id="friendRequests" action= "javascript:console.log( 'submited' );"></form> <br/>
 							<div id = "notify_actions"></div>
-
 						</div>
-					</div>
-					<div class="col-1-3">
 						<form action="../logout.php">
 							<button class="mdl-button mdl-js-button mdl-button-- mdl-color--orange">LOGOUT</button>
 						</form>
-					</div>
-			</div>
-			<div class="grid">
-				<div class="col-1-3">
-
 						<form action="chatroom.php" method="GET" id="form">
 							<button class="mdl-button mdl-js-button mdl-button-- mdl-color--orange">Enter Public Chat</button>
 						</form>
-
-
-				</div>
-
-
-
-
-
-
-
+					</div>
 			</div>
 		</center>
 	</body>
