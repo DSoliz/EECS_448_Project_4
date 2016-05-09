@@ -1,0 +1,2 @@
+-Friend List search is not working.
+-If a user does not hit the logout button they will still appear as connected.
