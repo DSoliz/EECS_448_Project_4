@@ -1,13 +1,19 @@
 function tester(){
 	console.log("TEST START");
 	console.log("Loading Friends List");
-	if(friend_list()){
+	if(setTimeout(friend_list(), 3000)){
 		console.log("Succes");
 	}else{
 		console.log("Failed");
 	}
 	console.log("Loading All Users List");
-	if(search_User_List()){
+	if(setTimeout(search_User_List(), 3000)){
+		console.log("Succes");
+	}else{
+		console.log("Failed");
+	}
+	console.log("Loading Friend Requests");
+	if(setTimeout(friend_requestor_list(), 3000)){
 		console.log("Succes");
 	}else{
 		console.log("Failed");
@@ -22,6 +28,7 @@ function search_User_List()
 	{
 		$('#users').html(datafromserver);
 	});
+	return true;
 }
 
 //crowds the user friend list with a list of his added friends
@@ -33,6 +40,7 @@ function friend_list()
 	{
 		$('#userFriendList').html(datafromserver);
 	});
+	return true;
 }
 
 //crowds requests form with users that have a pending friend request with the current user
@@ -44,6 +52,7 @@ function friend_requestor_list()
 	{
 		$('#friendRequests').html(datafromserver);
 	});
+	return true;
 }
 
 //Calls the addFriend.php to add friend request to the friend relation table
@@ -57,6 +66,7 @@ function addFriend(toADDid)
 		$('#notifications').html(datafromserver);
 	});
 	refresh_lists();
+	return true;
 }
 
 //Calls the Friend_Request_Update.php, 1 to accept request 0 to deny
@@ -70,12 +80,14 @@ function respond_request(req_id,response)
 		$('#notify_actions').html(datafromserver);
 	});
 	refresh_lists();
+	return true;
 }
 
 function refresh_lists(){
 	search_User_List();
 	friend_requestor_list();
 	friend_list();
+	return true;
 }
 
 //Handling accept and decline buttons
