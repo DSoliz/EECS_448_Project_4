@@ -1,2 +1,3 @@
 -Friend List search is not working.
 -If a user does not hit the logout button they will still appear as connected.
+-Lots of users on the site causes the Pre-Chat page to become very long
