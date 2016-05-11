@@ -1,2 +1,5 @@
 -Friend List search is not working.
 -If a user does not hit the logout button they will still appear as connected.
+-User list can become infinitely long on Pre-Chat page increasing the size of the page with each user
+-Freind list can become infinitely long on Pre-Chat page increasing the size of the page with each user
+
