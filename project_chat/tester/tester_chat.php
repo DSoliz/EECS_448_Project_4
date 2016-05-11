@@ -48,7 +48,7 @@ else{
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
 		<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-		<link href="Chat.css" rel="stylesheet" type="text/css"/>
+		<link href="../Chatroom/Chat.css" rel="stylesheet" type="text/css"/>
 	</head>
 
 	<body>
@@ -97,7 +97,7 @@ else{
 						<form action="../logout.php">
 							<button class="mdl-button mdl-js-button mdl-button-- mdl-color--orange">LOGOUT</button>
 						</form>
-						<form action="chatroom.php" method="GET" id="form">
+						<form action="../Chatroom/chatroom.php" method="GET" id="form">
 							<button class="mdl-button mdl-js-button mdl-button-- mdl-color--orange">Enter Public Chat</button>
 						</form>
 						<br>
