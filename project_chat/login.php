@@ -22,17 +22,24 @@
 		//If unsuccesful it may be the case usernames are duplicated
 		$count = mysqli_num_rows($result);
 
-		if(password_verify($pass, $row[Password])) {
-			$_SESSION['login_user'] = $usr;
-			header("location: successlog.php");
-		}else {
-			$error = "Invalid Login";
+		if($count == 1)
+		{
+			if(password_verify($pass, $row[Password])) {
+				$_SESSION['login_user'] = $usr;
+				header("location: successlog.php");
+			}else {
+				$error = "Invalid Login";
+			}
+		}
+		else
+		{
+			$error = "User does not exist";
 		}
 	}
 ?>
 <html>
 <head>
-	
+
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-orange.min.css">
 	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
