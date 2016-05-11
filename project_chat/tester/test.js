@@ -22,7 +22,7 @@ function tester(){
 
 function search_User_List()
 {
-	var file = "UserList.php";
+	var file = "../Chatroom/UserList.php";
 	var data = {inp: $('#usersearch').val()};
 	var jqxhr = $.post(file,data,function(datafromserver)
 	{
@@ -34,7 +34,7 @@ function search_User_List()
 //crowds the user friend list with a list of his added friends
 function friend_list()
 {
-	var file = "FriendList.php";
+	var file = "../Chatroom/FriendList.php";
 	var data = {inpfr: $('#friend_filter').val()};
 	var jqxhr = $.post(file,data,function(datafromserver)
 	{
@@ -46,7 +46,7 @@ function friend_list()
 //crowds requests form with users that have a pending friend request with the current user
 function friend_requestor_list()
 {
-	var file = "Friend_Requestor_List.php";
+	var file = "../Chatroom/Friend_Requestor_List.php";
 	var data = {inp: 1};
 	var jqxhr = $.post(file,data,function(datafromserver)
 	{
@@ -59,7 +59,7 @@ function friend_requestor_list()
 function addFriend(toADDid)
 {
 	if(toADDid == "" || toADDid == null){return};
-	var file = "addFriend.php";
+	var file = "../Chatroom/addFriend.php";
 	var data = {toAdd: toADDid};
 	var jqxhr = $.post(file,data,function(datafromserver)
 	{
@@ -72,7 +72,7 @@ function addFriend(toADDid)
 //Calls the Friend_Request_Update.php, 1 to accept request 0 to deny
 function respond_request(req_id,response)
 {
-	var file = "Friend_Request_Update.php";
+	var file = "../Chatroom/Friend_Request_Update.php";
 	var data = {requestor_id: req_id,accept: response};
 	var jqxhr = $.post(file,data,function(datafromserver)
 	{
