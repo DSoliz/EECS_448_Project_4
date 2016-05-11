@@ -5,4 +5,4 @@
 -Chat.php css can get weird graphics if the list is longer than the initial size of the window.
 -Friend list filter is not working properly.
 -Some browsers cache the content of pages and are available even after the user logs out (Suspect: Safari Browser)
-
+-On some mobile devices the auto scroll method may bug out (Chrome for Android)
