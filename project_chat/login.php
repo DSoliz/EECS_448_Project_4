@@ -32,6 +32,10 @@
 ?>
 <html>
 <head>
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-orange.min.css">
+	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 	<link href="login_register.css" rel="stylesheet" type="text/css"/>
 	<title>Login</title>
 </head>
@@ -42,7 +46,7 @@
 				<form action = "" method = "post">
 					<label>UserName :</label><input type = "text" name = "username" class = "box"/><br /><br />
 					<label>Password :</label><input type = "password" name = "password" class = "box" /><br/><br />
-					<button type = "submit">Submit<br />
+					<button class="mdl-button mdl-js-button mdl-button-- mdl-color--orange">Submit</button>
 				</form>
 				<div><?php echo ""; ?></div>
 			</div>

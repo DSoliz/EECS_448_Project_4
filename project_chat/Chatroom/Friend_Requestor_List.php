@@ -25,7 +25,7 @@ $toDisplay = ""; //Html formated string with buttons to accept or decline the rq
 for($i = 0; $i < sizeof($requestor_id); $i++){
 	$accept_button = "<button class='mdl-button mdl-js-button mdl-button-- mdl-color--orange' type='submit' name = 'accept' data-requestor_id = '" . $requestor_id[$i] ."' value='1'>Accept</button>";
 	$decline_button = "<button class='mdl-button mdl-js-button mdl-button-- mdl-color--orange' type='submit' name = 'decline' data-requestor_id = '" . $requestor_id[$i] ."' value='0'>Decline</button>";
-	$toDisplay = $toDisplay . $requestor_UsrName[$i] . $accept_button . $decline_button ."<br/>";
+	$toDisplay = $toDisplay . $requestor_UsrName[$i] . $accept_button . $decline_button ."<br/><br/>";
 }
 $db->close();
 echo $toDisplay;

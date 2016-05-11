@@ -33,6 +33,9 @@ if(isset($_POST['signup_button'])){
 ?>
 <html>
 <head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-orange.min.css">
+	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 	<link href="login_register.css" rel="stylesheet" type="text/css"/>
 	<title>Register</title>
 
@@ -47,7 +50,7 @@ if(isset($_POST['signup_button'])){
 						<label>UserName :</label><input type="text" name="username" required /><br /><br />
 						<label>Password :</label><input type="password" name="password" required /><br /><br />
 
-						<button type="submit" name="signup_button">Submit Registration</button><br /><br />
+						<button class="mdl-button mdl-js-button mdl-button-- mdl-color--orange" type="submit" name="signup_button">Submit Registration</button><br /><br />
 						<a href="login.php">Sign In Here</a>
 				</form>
 			</div>
