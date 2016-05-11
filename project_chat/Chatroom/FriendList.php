@@ -29,16 +29,19 @@ for($i = 0; $i < sizeof($friends_by_id); $i++){
 
 
 $outString = "";
-for($i = 0; $i < sizeof($friends_by_id); $i++){
+for($i = 0; $i < sizeof($friends_by_id); $i++)
+{
 	$friend_id = $friends_by_id[$i];
 	$friend_str = $u_friend_str[$i];
 	$online_stat = "Offline";
-	if(in_array($friend_id, $u_friends_on)){
+	if(in_array($friend_id, $u_friends_on))
+	{
 		$online_stat = "Online";
 	}
-	echo ($u_friend_str[$i] . "<button type='submit' name = 'start_chat' value='$friend_id'>CHAT</button>
-	<button type='submit' name = 'unFriend' value='$friend_id'>UNFRIEND</button>$online_stat<br/>");
+	echo ($u_friend_str[$i] . "<button class='mdl-button mdl-js-button mdl-button-- mdl-color--orange'  type='submit' name = 'start_chat' value='$friend_id'>CHAT</button>
+	<button class='mdl-button mdl-js-button mdl-button-- mdl-color--orange' type='submit' name = 'unFriend' value='$friend_id'>UNFRIEND</button>$online_stat<br/><br/>");
 }
 
 $db->close();
 ?>
+

@@ -45,22 +45,36 @@ $toDisplay = "";
 
 for($i = 0; $i < sizeof($Users); $i++)
 {
-	if($searchTerm == ""){
+	
+	if($searchTerm == "")
+	{
 		$contains = true;
-	}else{
+	}
+	else
+	{
 		$contains = strpos($Users[$i], $searchTerm);
 	}
-	if($contains !== false){
-		if (in_array( $UsersID[$i] , $discriminate)){
-			if(in_array($UsersID[$i], $friends_by_id_pending)){
-				$toDisplay = $toDisplay . $Users[$i] . " Pending Request <br />";
-			}else{
-				$toDisplay = $toDisplay . $Users[$i] . "<br />";
+		
+	if($contains !== false)
+	{
+		if (in_array( $UsersID[$i] , $discriminate))
+		{
+			if(in_array($UsersID[$i], $friends_by_id_pending))
+			{
+				$toDisplay = $toDisplay . $Users[$i] . " Pending Request <br /><br />";
 			}
-		}else{
-			$toDisplay = $toDisplay . $Users[$i] . "<button class='mdl-button mdl-js-button mdl-button-- mdl-color--orange' type='submit' name = 'toAdd' value='". $UsersID[$i] ."'>AddFriend</button><br />";
+			else
+			{
+				$toDisplay = $toDisplay . $Users[$i] . "<br /><br />";
+			}
+		}
+		else
+		{
+			$toDisplay = $toDisplay . $Users[$i] . "<button class='mdl-button mdl-js-button mdl-button-- mdl-color--orange' type='submit' name = 'toAdd' value='". $UsersID[$i] ."'>AddFriend</button><br /><br />";
+
 		}
 	}
+
 }
 $db->close();
 echo $toDisplay;
